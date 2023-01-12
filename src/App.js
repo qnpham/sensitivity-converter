@@ -9,32 +9,36 @@ function App() {
   return (
     <div className="container">
       <form>
-        <label>
-          input:
-          <select>
-            <option value="val">Valorant</option>
-            <option value="apex">Apex Legends</option>
-            <option value="cm">cm/360</option>
-          </select>
-        </label>
-        <label>
-          output:
-          <select>
-            <option value="val">Valorant</option>
-            <option value="apex">Apex Legends</option>
-            <option value="cm">cm/360</option>
-          </select>
-        </label>
-        <label>
-          sensitivity:
-          <input type="number" value={sens} onChange={sensFilter} />
-        </label>
-        <label>
-          dpi:
-          <input type="number" />
-        </label>
+        <div className="io">
+          <label>
+            input:
+            <select>
+              <option value="val">Valorant</option>
+              <option value="apex">Apex Legends</option>
+              <option value="cm">cm/360</option>
+            </select>
+          </label>
+          <label>
+            output:
+            <select>
+              <option value="val">Valorant</option>
+              <option value="apex">Apex Legends</option>
+              <option value="cm">cm/360</option>
+            </select>
+          </label>
+        </div>
+        <div className="sens">
+          <label>
+            sensitivity:
+            <input type="number" value={sens} onChange={sensFilter} />
+          </label>
+          <label>
+            dpi:
+            <input type="number" />
+          </label>
+        </div>
       </form>
-      <span>converted sens: {sens}</span>
+      <p className="converted">converted sens: {sens}</p>
     </div>
   );
 }
