@@ -22,7 +22,15 @@ function App() {
       if (output === "val") {
         setNewSens(sens / 3.18181818);
       } else if (output === "ow") {
-        setNewSens(sens / 3.33333);
+        setNewSens(sens / 3.333);
+      } else {
+        setNewSens(sens);
+      }
+    } else if (input === "ow") {
+      if (output === "val") {
+        setNewSens(sens * 10.6);
+      } else if (output === "apex") {
+        setNewSens(sens * 3.333);
       } else {
         setNewSens(sens);
       }
